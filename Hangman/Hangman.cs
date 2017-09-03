@@ -29,15 +29,16 @@ namespace Hangman
             {
                 Console.Write("Enter your guess:  ");
                 var guess = Console.ReadLine()[0].ToString();
+                Console.Clear();
                 ProcessGuess(guess);
                 if(WordCorrectlyGuessed())
                 {
-                    Console.WriteLine($"Congratulations! You guess your word, {WordToGuess} correctly!");
+                    Console.WriteLine($"Congratulations! You guess your word, {WordToGuess}, correctly!");
                     break;
                 }
                 PrintHangman();
                 PrintDashedWord();
-                Console.WriteLine("Guess list: ");
+                
                 PrintGuessList();
                 PrintRemainingLives();
             }
@@ -49,10 +50,9 @@ namespace Hangman
 
         public void PrintDashedWord()
         {
+            Console.WriteLine("Guess list: ");
             for (var i = 0; i < DashedWord.Length; i++)
-            {
                 Console.Write(DashedWord[i] + " ");
-            }
             Console.WriteLine();
             Console.WriteLine();
         }

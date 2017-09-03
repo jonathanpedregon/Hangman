@@ -10,7 +10,7 @@ namespace Hangman
     {
         static void Main(string[] args)
         {
-            var hangman = new Hangman("university"); //the constructor takes the word you want to guess
+            var hangman = new Hangman("nigganigganigga"); //the constructor takes the word you want to guess
             hangman.Run();
         }
     }
